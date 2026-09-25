@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "HanDisplay";
+  src:
+    local("LiSu"),
+    local("STLiti"),
+    local("FZLiShu-S01"),
+    local("DFLiSu Std W5"),
+    local("KaiTi");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HanText";
+  src:
+    local("Source Han Serif SC"),
+    local("Noto Serif CJK SC"),
+    local("Songti SC"),
+    local("STSong"),
+    local("SimSun");
+  font-display: swap;
+}
+
+:root {
+  --app-font-display: "HanDisplay", "LiSu", "STLiti", "KaiTi", serif;
+  --app-font-body: "HanText", "Noto Serif SC", "Songti SC", "SimSun", serif;
+  --app-bg: #120807;
+  --app-bg-deep: #070303;
+  --app-panel: rgba(28, 12, 10, 0.64);
+  --app-panel-strong: rgba(46, 18, 13, 0.74);
+  --app-panel-soft: rgba(72, 32, 23, 0.54);
+  --app-border: rgba(242, 180, 111, 0.22);
+  --app-border-strong: rgba(255, 167, 82, 0.4);
+  --app-text: #f2e5cf;
+  --app-text-soft: #dbc5a2;
+  --app-text-faint: #b79272;
+  --app-title: #ff7d36;
+  --app-accent: #c73c26;
+  --app-accent-soft: #f0ae53;
+  font-family: var(--app-font-body);
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--app-text);
+  background-color: var(--app-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--app-bg);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+  background:
+    radial-gradient(circle at 14% 16%, rgba(186, 59, 36, 0.34), transparent 24%),
+    radial-gradient(circle at 82% 18%, rgba(255, 171, 79, 0.16), transparent 24%),
+    linear-gradient(180deg, #200a08 0%, #120807 38%, #080303 100%);
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at center, rgba(255, 223, 168, 0.08), transparent 58%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.018) 0 1px,
+      transparent 1px 52px
+    ),
+    linear-gradient(125deg, rgba(255, 124, 51, 0.08) 0%, transparent 28%);
+  mix-blend-mode: screen;
+  opacity: 0.75;
+  z-index: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}

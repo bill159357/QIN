@@ -1,0 +1,12 @@
+{
+  "name": "deepjiandu_fullpage_eval_pack",
+  "split": "test",
+  "num_records": 200,
+  "limit": 200,
+  "sample_mode": "random",
+  "seed": 42,
+  "missing_images": 0,
+  "empty_pages": 0,
+  "copied_images": 200,
+  "note": "参考释文由已标注字符按列重建：各列自右向左排列，每列内再按自上而下顺序生成。"
+}

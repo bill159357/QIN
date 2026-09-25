@@ -1,0 +1,27 @@
+# Test your FastAPI endpoints
+
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/hello/User
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/ocr/jobs
+Accept: application/json
+
+###
+
+# Example (adjust file path on your machine):
+# POST http://127.0.0.1:8000/ocr/jobs
+# Content-Type: multipart/form-data; boundary=boundary
+#
+# --boundary
+# Content-Disposition: form-data; name="files"; filename="sample.png"
+# Content-Type: image/png
+#
+# < C:\path\to\sample.png
+# --boundary--
